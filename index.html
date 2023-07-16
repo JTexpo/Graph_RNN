@@ -1,0 +1,96 @@
+<html>
+
+<head>
+    <!-- PyScript: https://github.com/pyscript/pyscript/releases -->
+    <link rel="stylesheet" href="https://pyscript.net/releases/2023.05.1/pyscript.css" />
+    <script defer src="https://pyscript.net/releases/2023.05.1/pyscript.js"></script>
+    <!-- Bootstrap: https://getbootstrap.com -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- local Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <py-config>
+        packages = [
+          "numpy",
+          "matplotlib",
+        ]
+        [[fetch]]
+        files = ["./main.py", "./graph_rnn/utils.py", "./graph_rnn/rnn_layer.py", "./graph_rnn/activation_function.py"]
+    </py-config>
+</head>
+
+<body>
+    <!-- Healthy Spacing -->
+    <br>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col logo-flex-col">
+                    <img src="assets/images/jtexpo.png" alt="" class="logo-img">
+                    <div class="display-3 logo-main-text">Graph RNN</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Healthy Spacing -->
+    <br>
+    <br>
+    <!-- Graph RNN -->
+    <main>
+        <div class = "container">
+            <!-- Input -->
+            <div class = "row">
+                <div class = "col-md-2"></div>
+                <div class = "col-md-8">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon3">Enter Next Y Coordinate</span>
+                        </div>
+                        <input type="text" class="form-control" aria-describedby="basic-addon3" id="new-coordinate">
+                    </div>
+                </div>
+                <div class = "col-md-2"></div>
+            </div>
+            <!-- Button Selection -->
+            <div class="row">
+                <div class = "col-md-2"></div>
+                <div class = "col-md-4">
+                    <button class="btn btn-success btn-block project-btn" py-click="add_coordinate()">Add</button>
+                </div>
+                <div class = "col-md-4">
+                    <button class="btn btn-danger btn-block project-btn" py-click="reset_graph()">Reset</button>
+                </div>
+                <div class = "col-md-2"></div>
+            </div>
+            <!-- Healthy Spacing -->
+            <br>
+            <br>
+            <!-- Graph -->
+            <div class="row">
+                <div class = "col-md-2"></div>
+                <div class = "col-md-8 text-center">
+                    <div id="rnn-graph"></div>
+                </div>
+                <div class = "col-md-2"></div>
+            </div>
+        </div>
+    </main>
+    <!-- Healthy Spacing -->
+    <br>
+    <br>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class = "row">
+                <div class = "col text-center">
+                    <div class="h4 footer-rights">&copy; 2023 Justin Tyler Esposito. All rights reserved.</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <py-script src="./main.py"></py-script>
+</body>
+
+</html>

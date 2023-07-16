@@ -1,0 +1,49 @@
+@font-face { font-family: Alexandria-Black; src: url('assets/fonts/Alexandria/static/Alexandria-Black.ttf'); } 
+
+/*
+----
+BODY
+----
+*/
+body{
+    background-color: #343434;
+}
+
+/* 
+----------
+LOGO STYLE
+----------
+*/
+.logo-flex-col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo-img{
+    height: 5rem;
+    width: 5rem;
+}
+.logo-sub-text{
+    color:#FFF;
+    font-family: Alexandria-Black;
+    text-shadow: .3rem .3rem 0 #000;
+}
+.logo-main-text{
+    color: #FFF;
+    font-family: Alexandria-Black;
+    text-shadow: .3rem .3rem 0 #000;
+}
+
+/**/
+.center-graph{
+    justify-content: center;
+}
+
+/* 
+------------
+FOOTER STYLE
+------------
+*/
+.footer-rights{
+    color: #FFF;
+}
