@@ -28,13 +28,25 @@ LOGO STYLE
     font-family: Alexandria-Black;
     text-shadow: .3rem .3rem 0 #000;
 }
+.logo-sub-text:hover{
+    color:#F3AF56;
+    text-decoration: none;
+}
 .logo-main-text{
     color: #FFF;
     font-family: Alexandria-Black;
     text-shadow: .3rem .3rem 0 #000;
 }
+.logo-main-text:hover{
+    color: #FFF;
+    text-decoration: none;
+}
 
-/**/
+/*
+----
+MAIN
+----
+*/
 .center-graph{
     justify-content: center;
 }

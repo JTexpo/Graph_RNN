@@ -16,16 +16,15 @@ from graph_rnn.activation_function import (
 # --------------------
 RNN_GRAPH_ID = "rnn-graph"
 RNN_SIZE = 6
-RNN_TRAIN_MIN_SIZE = RNN_SIZE * 1.5
+RNN_TRAIN_MIN_SIZE = 9
 RNN_SEED = 1
 RNN_EPOCHES = 100
 RNN_FORWARD_PREDICT = 10
 new_coordinate = Element("new-coordinate")
 graph_rnn_element = Element(RNN_GRAPH_ID)
 
-log = Element("log")
-
-graph_coordinates: List[float] = []
+new_coordinate.element.value = 4
+graph_coordinates: List[float] = [1,2,3,2,3,4,3,4,5]
 
 # CREATING GRAPH
 # --------------
@@ -35,7 +34,7 @@ axis.set_xlabel("X Axis")
 axis.set_ylabel("Y Axis")
 
 rnn_axis, = axis.plot([], label="Predicted")
-given_axis, = axis.plot([], label="Given")
+given_axis, = axis.plot(graph_coordinates, label="Given")
 
 axis.legend()
 
