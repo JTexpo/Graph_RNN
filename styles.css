@@ -1,4 +1,5 @@
 @font-face { font-family: Alexandria-Black; src: url('assets/fonts/Alexandria/static/Alexandria-Black.ttf'); } 
+@font-face { font-family: Alexandria-Regular; src: url('../../assets/fonts/Alexandria/static/Alexandria-Regular.ttf'); } 
 
 /*
 ----
@@ -49,6 +50,18 @@ MAIN
 */
 .center-graph{
     justify-content: center;
+}
+
+.info-header{
+    color: #F3AF56;
+    font-family: Alexandria-Black;
+    text-shadow: .2rem .2rem 0 #000;
+}
+
+.info-body{
+    color:#FFF;
+    font-family: Alexandria-Regular;
+    text-shadow: .1rem .1rem 0 #000;
 }
 
 /* 
